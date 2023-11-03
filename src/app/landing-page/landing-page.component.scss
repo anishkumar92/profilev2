@@ -1,0 +1,150 @@
+/* Highlight styling */
+.highlight {
+  color: #f1431d; /* Bootstrap primary color for highlights */
+  font-weight: bold;
+}
+
+.hg-text {
+  //   font-size: rem;
+}
+
+/* Header adjustments for better spacing and readability */
+h2 {
+  font-size: 2.5rem; /* Larger font size for headers */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Profile card specific styling */
+.profile-card {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: #ff5757; /* Bootstrap primary button color */
+  border: none;
+  padding: 0.5rem 1rem; /* Padding for larger click area */
+  margin: 0.5rem; /* Spacing between buttons */
+  color: white;
+  width: 200px;
+  &:hover {
+    background-color: darken(#ff5733, 5%);
+  }
+}
+
+.pb-2 {
+  padding-bottom: 2rem;
+}
+
+.carter {
+  text-align: center;
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Media query for larger devices */
+@media (min-width: 768px) {
+  .header h1 {
+    font-size: 2.5rem; /* Slightly larger font size for desktop */
+  }
+
+  /* Adjust button size for desktop */
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.75rem 1.5rem; /* Larger padding for desktop */
+    font-size: 1rem; /* Larger font size for buttons on desktop */
+  }
+  .carter {
+    text-align: end;
+    h2 {
+      font-size: 5rem;
+    }
+  }
+}
+
+/* Ensure the image is not too large on bigger screens */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  max-height: 400px; /* Maximum height for the profile image */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 5s;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slideInFromLeft {
+  animation: 2s ease-out 0s 1 slideInFromLeft;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slideInFromRight {
+  animation: 3s ease-out 0s 1 slideInFromRight;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pop-in {
+  animation: popIn 3s ease forwards;
+}
+
+@keyframes fadeInScale {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.profile-pic-animation {
+  animation: fadeInScale 8s ease forwards;
+}
