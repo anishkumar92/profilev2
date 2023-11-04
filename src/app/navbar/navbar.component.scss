@@ -1,9 +1,50 @@
-.sidenav-container {
-  height: 100%;
+/* styles.scss or your specific component scss */
+
+// Define your color variables
+$primary-color: #f1431d;
+$text-color: #fff;
+
+// Navbar customization
+.navbar-custom {
+  background-color: transparent;
+  min-height: 80px; // Smaller navbar height
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: x-large;
+
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        color: $text-color;
+        &:hover,
+        &.active {
+          color: $primary-color;
+        }
+      }
+    }
+  }
 }
 
-mat-nav-list a.active {
-  background: rgba(255, 255, 255, 0.1);
+// Remove the focus outline on focus for cleaner navigation experience
+.navbar-custom .nav-link:focus {
+  outline: none;
 }
 
-/* You can add more styles as needed */
+// Using flex-nowrap to avoid wrapping of navbar items on small screens
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+// Adjusting padding for nav-items to ensure they fit in mobile view
+@media (max-width: 576px) {
+  .navbar-custom .navbar-nav .nav-item {
+    padding: 0 0.5rem; // Reduce padding on smaller screens
+  }
+}
+
+// Ensuring text size is manageable on small screens
+@media (max-width: 576px) {
+  .navbar-custom .navbar-nav .nav-link {
+    font-size: 1rem; // Smaller font size for mobile view
+  }
+}
